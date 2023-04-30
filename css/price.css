@@ -1,0 +1,1003 @@
+@charset "UTF-8";
+.info {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  margin-top: 240px;
+  align-items: center;
+}
+.info .qq {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  margin-left: 10px;
+}
+.info .qq .q1 {
+  overflow: hidden;
+  background: #555555;
+  border-radius: 30px;
+  width: 800px;
+  margin: 15px;
+}
+.info .qq .q1 .but {
+  padding: 40px 30px;
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  transition: 0.6s;
+  font-family: "SF UI Display";
+  font-size: 18px;
+  color: #fff;
+}
+.info .qq .q1 .toggle {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.9s;
+}
+.info .qq .q1 .toggle p {
+  text-indent: 10px;
+  font-family: "SF UI Display";
+  padding: 30px;
+  transition: 0.6s;
+  line-height: 1.8;
+  font-size: 16px;
+}
+.info .qq .q1 .toggle p a {
+  text-decoration: none;
+  color: #a797f7;
+  font-weight: bold;
+}
+.info .qq .q1 .toggle p b {
+  color: #a797f7;
+}
+.info .qq .q1 p {
+  font-family: "SF UI Display";
+  font-size: 18px;
+  line-height: 5px;
+  color: #fff;
+  margin: 35px;
+}
+.info .d5 {
+  position: absolute;
+  z-index: 10;
+  right: 40px;
+  display: flex;
+  justify-content: left;
+  width: 700px;
+  height: 700px;
+  background: #3F44BB;
+  filter: blur(150px);
+}
+.info .pic {
+  z-index: 15;
+  position: absolute;
+  animation-name: rotation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  width: 700px;
+  height: 700px;
+}
+
+@media (max-width: 1200px) {
+  .info {
+    margin-top: 200px;
+  }
+  .info .qq {
+    margin-left: 15px;
+  }
+  .info .qq .q1 {
+    max-width: 80%;
+    margin: 5px;
+    border-radius: 20px;
+  }
+  .info .qq .q1 .but {
+    padding: 15px 40px;
+    font-size: 16px;
+  }
+  .info .qq .q1 .toggle p {
+    font-size: 14px;
+  }
+  .info .d5 {
+    width: 500px;
+    height: 500px;
+    background: #3F44BB;
+    filter: blur(150px);
+  }
+  .info .pic {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (max-width: 992px) {
+  .info {
+    flex-direction: column-reverse;
+  }
+  .info .qq {
+    margin: auto;
+  }
+  .info .qq .q1 {
+    max-width: 100%;
+    margin: 10px auto;
+  }
+  .info .qq .q1 .toggle {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.9s;
+  }
+  .info .qq .q1 .toggle p {
+    font-family: "SF UI Display";
+    padding: 30px;
+    transition: 0.6s;
+    line-height: 1.8;
+    font-size: 14px;
+  }
+  .info .qq .q1 p {
+    font-family: "SF UI Display";
+    font-size: 18px;
+    line-height: 5px;
+    color: #fff;
+    margin: 35px;
+  }
+  .info .d5 {
+    position: relative;
+    right: auto;
+    top: -90px;
+    width: 400px;
+    height: 400px;
+    background: #3F44BB;
+    filter: blur(90px);
+  }
+  .info .pic {
+    right: auto;
+    z-index: 20;
+    top: -100px;
+    width: 500px;
+    height: 500px;
+  }
+}
+@media (max-width: 740px) {
+  .info {
+    flex-direction: column-reverse;
+  }
+  .info .qq .q1 .but {
+    padding: 30px 60px;
+    font-size: 18px;
+  }
+  .info .qq .q1 .toggle {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.9s;
+  }
+  .info .qq .q1 .toggle p {
+    font-family: "SF UI Display";
+    padding: 30px;
+    transition: 0.6s;
+    line-height: 1.8;
+    font-size: 12px;
+  }
+  .info .qq .q1 p {
+    font-family: "SF UI Display";
+    font-size: 18px;
+    line-height: 5px;
+    color: #fff;
+    margin: 35px;
+  }
+  .info .d5 {
+    position: relative;
+    right: auto;
+    top: -90px;
+    width: 400px;
+    height: 400px;
+    background: #3F44BB;
+    filter: blur(90px);
+  }
+  .info .pic {
+    right: auto;
+    z-index: 20;
+    top: -100px;
+    width: 500px;
+    height: 500px;
+  }
+}
+@media (max-width: 425px) {
+  .info .qq .q1 {
+    max-width: 90%;
+    margin: 15px;
+  }
+  .info .qq .q1 .but {
+    padding: 30px 20px;
+    font-size: 18px;
+  }
+  .info .qq .q1 .toggle {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.9s;
+  }
+  .info .qq .q1 .toggle p {
+    font-family: "SF UI Display";
+    padding: 10px;
+    margin: 20px;
+    text-indent: 5px;
+    transition: 0.6s;
+    line-height: 1.8;
+    font-size: 13px;
+  }
+  .info .qq .q1 p {
+    font-family: "SF UI Display";
+    font-size: 18px;
+    line-height: 5px;
+    color: #fff;
+    margin: 35px;
+  }
+  .info .d5 {
+    position: relative;
+    right: auto;
+    top: -70px;
+    width: 350px;
+    height: 350px;
+    background: #3F44BB;
+    filter: blur(90px);
+  }
+  .info .pic {
+    right: auto;
+    z-index: 20;
+    top: -100px;
+    width: 400px;
+    height: 400px;
+  }
+}
+.footer {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 250px 20px 20px 20px;
+  border-radius: 30px;
+  background-color: #46464A;
+  height: 600px;
+}
+.footer .soc_m {
+  display: flex;
+  flex-direction: column;
+}
+.footer .soc_m h1 {
+  font-family: "Dream Avenue";
+  font-weight: 400;
+  font-size: 85px;
+  color: #FFFFFF;
+  margin: 20px;
+}
+.footer .soc_m p {
+  font-family: "SF UI Display";
+  font-weight: 500;
+  align-items: center;
+  font-size: 22px;
+  color: #FFFFFF;
+  margin: 20px 10px 10px 10px;
+}
+.footer .soc_m .icon {
+  display: flex;
+  flex-direction: row;
+  justify-items: baseline;
+  justify-self: center;
+  margin: 10px;
+}
+.footer .soc_m .icon svg {
+  width: 75px;
+  height: 75px;
+}
+.footer .form {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  align-items: center;
+}
+.footer .form form {
+  background: rgba(112, 110, 110, 0.5);
+  border-radius: 50px;
+  width: 600px;
+  height: 550px;
+  margin: 20px;
+  align-items: center;
+}
+.footer .form form .lab {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.footer .form form .lab label {
+  display: flex;
+  margin: 0 auto;
+  width: 430px;
+  justify-content: space-between;
+  padding: 5px;
+  font-family: "SF UI Display";
+  color: #FFFFFF;
+  font-size: 17px;
+}
+.footer .form form .lab label select, .footer .form form .lab label option {
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  font-family: "SF UI Display";
+  font-size: 15px;
+}
+.footer .form form .lab label input {
+  width: 246px;
+  height: 48px;
+  border-radius: 10px;
+  border: none;
+  font-family: "SF UI Display";
+  font-size: 15px;
+}
+.footer .form form .lab label #type {
+  width: 250px;
+  height: 50px;
+}
+.footer .form form .but {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.footer .form form .but button {
+  width: 190px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  font-family: "SF UI Display";
+  font-size: 15px;
+  display: inline;
+  margin: 8px;
+  background-color: #487df8;
+}
+.footer .form form .but .third {
+  border-color: #3447db;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #3470fd inset, 0 0 0 0 #5c50fd;
+  transition: all 150ms ease-in-out;
+}
+.footer .form form .but .third:hover {
+  box-shadow: 0 0 10px 0 #2d6cfe inset, 0 0 10px 4px #8d86f2;
+}
+.footer .blur .d6 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 20px;
+  right: 470px;
+  background: #3795EC;
+  filter: blur(90px);
+}
+.footer .blur .d7 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 5px;
+  right: 150px;
+  background: #35C99C;
+  filter: blur(80px);
+}
+.footer .blur .d8 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 310px;
+  right: 550px;
+  background: #3F44BB;
+  filter: blur(95px);
+}
+.footer .blur .d9 {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  top: 255px;
+  right: 120px;
+  background: #d473df;
+  filter: blur(95px);
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    height: 500px;
+  }
+  .footer .soc_m h1 {
+    font-family: "Dream Avenue";
+    margin: 15px;
+    font-size: 65px;
+    color: #FFFFFF;
+  }
+  .footer .soc_m p {
+    font-family: "SF UI Display";
+    font-weight: 500;
+    align-items: center;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin: 20px 5px 5px 10px;
+  }
+  .footer .soc_m .icon {
+    margin: 10px;
+  }
+  .footer .soc_m .icon svg {
+    width: 60px;
+    height: 60px;
+  }
+  .footer .form form {
+    border-radius: 40px;
+    width: 500px;
+    height: 450px;
+    margin: 20px;
+  }
+  .footer .form form .lab label {
+    width: 330px;
+    font-size: 15px;
+  }
+  .footer .form form .lab label select, .footer .form form .lab label option {
+    width: 180px;
+    height: 40px;
+    font-size: 15px;
+  }
+  .footer .form form .lab label input {
+    width: 176px;
+    height: 38px;
+    font-size: 15px;
+  }
+  .footer .form form .lab label #type {
+    width: 179px;
+    height: 40px;
+  }
+  .footer .form form .but button {
+    width: 120px;
+    height: 40px;
+  }
+  .footer .form form .but .third {
+    border-color: #3447db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3470fd inset, 0 0 0 0 #5c50fd;
+    transition: all 150ms ease-in-out;
+  }
+  .footer .form form .but .third:hover {
+    box-shadow: 0 0 10px 0 #2d6cfe inset, 0 0 10px 4px #8d86f2;
+  }
+  .footer .blur .d6 {
+    right: 330px;
+    background: #3795EC;
+    filter: blur(90px);
+  }
+  .footer .blur .d7 {
+    top: 5px;
+    right: 100px;
+    background: #35C99C;
+    filter: blur(80px);
+  }
+  .footer .blur .d8 {
+    top: 295px;
+    right: 340px;
+    background: #3F44BB;
+    filter: blur(95px);
+  }
+  .footer .blur .d9 {
+    top: 225px;
+    right: 80px;
+    background: #e978f8;
+    filter: blur(90px);
+  }
+}
+@media (max-width: 992px) {
+  .footer .soc_m h1 {
+    font-family: "Dream Avenue";
+    margin: 15px;
+    font-size: 55px;
+    color: #FFFFFF;
+  }
+  .footer .soc_m p {
+    font-family: "SF UI Display";
+    font-weight: 500;
+    align-items: center;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin: 20px 5px 5px 10px;
+  }
+  .footer .soc_m .icon {
+    margin: 10px;
+  }
+  .footer .soc_m .icon svg {
+    width: 50px;
+    height: 50px;
+  }
+  .footer .form form {
+    border-radius: 40px;
+    width: 400px;
+    height: 450px;
+    margin: 20px;
+  }
+  .footer .form form .lab label {
+    margin: auto;
+    width: 330px;
+    font-size: 14px;
+  }
+  .footer .form form .lab label select, .footer .form form .lab label option {
+    width: 180px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .footer .form form .lab label input {
+    width: 176px;
+    height: 38px;
+    font-size: 14px;
+  }
+  .footer .form form .lab label #type {
+    width: 179px;
+    height: 40px;
+  }
+  .footer .form form .but button {
+    width: 120px;
+    height: 40px;
+  }
+  .footer .form form .but .third {
+    border-color: #3447db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3470fd inset, 0 0 0 0 #5c50fd;
+    transition: all 150ms ease-in-out;
+  }
+  .footer .form form .but .third:hover {
+    box-shadow: 0 0 10px 0 #2d6cfe inset, 0 0 10px 4px #8d86f2;
+  }
+  .footer .blur .d6 {
+    right: 130px;
+    background: #3795EC;
+    filter: blur(90px);
+  }
+  .footer .blur .d7 {
+    width: 200px;
+    height: 200px;
+    top: 5px;
+    right: 50px;
+    background: #35C99C;
+    filter: blur(80px);
+  }
+  .footer .blur .d8 {
+    top: 240px;
+    right: 150px;
+    background: #3F44BB;
+    filter: blur(95px);
+  }
+  .footer .blur .d9 {
+    width: 300px;
+    height: 300px;
+    top: 225px;
+    right: 40px;
+    background: #e978f8;
+    filter: blur(90px);
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    flex-direction: column-reverse;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .footer .soc_m h1 {
+    font-family: "Dream Avenue";
+    margin: 15px;
+    z-index: 10;
+    font-size: 65px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  .footer .soc_m p {
+    font-family: "SF UI Display";
+    font-weight: 500;
+    align-items: center;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin: 20px 5px 5px 10px;
+  }
+  .footer .soc_m .icon {
+    margin: 10px;
+    justify-content: center;
+  }
+  .footer .soc_m .icon svg {
+    width: 50px;
+    height: 50px;
+  }
+  .footer .form form {
+    border-radius: 40px;
+    width: 600px;
+    height: 450px;
+    margin: 20px;
+  }
+  .footer .form form .lab label {
+    margin: auto;
+    width: 90%;
+    font-size: 16px;
+  }
+  .footer .form form .lab label select, .footer .form form .lab label option {
+    width: 180px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .footer .form form .lab label input {
+    width: 176px;
+    height: 38px;
+    font-size: 14px;
+  }
+  .footer .form form .lab label #type {
+    width: 179px;
+    height: 40px;
+  }
+  .footer .form form .but button {
+    width: 120px;
+    height: 40px;
+  }
+  .footer .form form .but .third {
+    border-color: #3447db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3470fd inset, 0 0 0 0 #5c50fd;
+    transition: all 150ms ease-in-out;
+  }
+  .footer .form form .but .third:hover {
+    box-shadow: 0 0 10px 0 #2d6cfe inset, 0 0 10px 4px #8d86f2;
+  }
+  .footer .blur .d6 {
+    left: 50px;
+    background: #3795EC;
+    filter: blur(90px);
+  }
+  .footer .blur .d7 {
+    width: 200px;
+    height: 200px;
+    top: 5px;
+    right: 50px;
+    background: #35C99C;
+    filter: blur(80px);
+  }
+  .footer .blur .d8 {
+    top: 200px;
+    left: 50px;
+    background: #3F44BB;
+    filter: blur(95px);
+  }
+  .footer .blur .d9 {
+    width: 300px;
+    height: 300px;
+    top: 180px;
+    right: 25px;
+    background: #e978f8;
+    filter: blur(90px);
+  }
+}
+@media (max-width: 425px) {
+  .footer {
+    flex-direction: column-reverse;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .footer .soc_m h1 {
+    font-family: "Dream Avenue";
+    z-index: 10;
+    font-size: 65px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  .footer .soc_m p {
+    display: none;
+  }
+  .footer .soc_m .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+  }
+  .footer .soc_m .icon {
+    margin: 10px;
+    justify-content: center;
+  }
+  .footer .soc_m .icon svg {
+    width: 50px;
+    height: 50px;
+  }
+  .footer .form form {
+    border-radius: 40px;
+    width: 90%;
+    height: 450px;
+    margin: 20px;
+  }
+  .footer .form form .lab label {
+    width: 90%;
+    margin: 5px;
+    font-size: 14px;
+  }
+  .footer .form form .lab label select, .footer .form form .lab label option {
+    width: 180px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .footer .form form .lab label input {
+    width: 176px;
+    height: 38px;
+    font-size: 14px;
+  }
+  .footer .form form .lab label #type {
+    width: 179px;
+    height: 40px;
+  }
+  .footer .form form .but button {
+    width: 120px;
+    height: 40px;
+  }
+  .footer .form form .but .third {
+    border-color: #3447db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3470fd inset, 0 0 0 0 #5c50fd;
+    transition: all 150ms ease-in-out;
+  }
+  .footer .form form .but .third:hover {
+    box-shadow: 0 0 10px 0 #2d6cfe inset, 0 0 10px 4px #8d86f2;
+  }
+  .footer .blur .d6 {
+    left: 50px;
+    background: #3795EC;
+    filter: blur(90px);
+  }
+  .footer .blur .d7 {
+    width: 200px;
+    height: 200px;
+    top: 5px;
+    right: 50px;
+    background: #35C99C;
+    filter: blur(80px);
+  }
+  .footer .blur .d8 {
+    top: 200px;
+    left: 50px;
+    background: #3F44BB;
+    filter: blur(95px);
+  }
+  .footer .blur .d9 {
+    width: 300px;
+    height: 300px;
+    top: 180px;
+    right: 25px;
+    background: #e978f8;
+    filter: blur(90px);
+  }
+}
+.price {
+  display: flex;
+  margin: 30px;
+  justify-content: space-around;
+  margin-top: 150px;
+}
+.price p {
+  font-family: "Acherus Feral";
+  font-size: 25px;
+  line-height: 5px;
+  color: #000000;
+  text-align: center;
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.45);
+}
+.price .pr {
+  font-family: "Microsoft Yi Baiti";
+  font-weight: 500;
+}
+.price .t {
+  margin-top: 60px;
+}
+.price .price-item {
+  margin: 15px;
+  width: 25%;
+  height: 750px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px 0px rgba(189, 189, 221, 0.536);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+}
+.price .price-item #blackBg {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0;
+  border-radius: 20px;
+}
+.price .tp {
+  opacity: 0;
+  transition: 1s;
+}
+.price .tp.active {
+  position: relative;
+  z-index: 10;
+  transition: 1s;
+  opacity: 1;
+  font-family: "SF UI Display";
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+}
+.price .tp.active a {
+  text-decoration: none;
+  transition: 1s;
+}
+.price .book_sh {
+  background-image: url(../иконки/album.jpg);
+}
+.price .com_sh {
+  background-image: url(../иконки/com.jpeg);
+}
+.price .ind_sh {
+  background-image: url(../иконки/ind.jpg);
+}
+.price .love_sh {
+  background-image: url(../иконки/lovestory.jpg);
+}
+
+@media (max-width: 1200px) {
+  .price {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    margin-top: -50px;
+  }
+  .price p {
+    font-family: "Acherus Feral";
+    font-size: 16px;
+    line-height: 5px;
+    color: #000000;
+    text-align: center;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.45);
+  }
+  .price .t {
+    margin-top: 50px;
+  }
+  .price .price-item {
+    margin: 15px;
+    height: 750px;
+    border-radius: 15px;
+  }
+  .price .price-item #blackBg {
+    border-radius: 15px;
+  }
+  .price .price-item .tp.active {
+    font-size: 14px;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    line-height: 20px;
+  }
+  .price .price-item .tp.active b {
+    color: #909ff8;
+  }
+}
+@media (max-width: 1024px) {
+  .price {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    margin-top: -50px;
+  }
+  .price p {
+    font-family: "Acherus Feral";
+    font-size: 16px;
+    line-height: 5px;
+    color: #000000;
+    text-align: center;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.45);
+  }
+  .price .t {
+    margin-top: 50px;
+  }
+  .price .price-item #blackBg {
+    border-radius: 15px;
+  }
+  .price .price-item .tp.active {
+    font-size: 14px;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    line-height: 16px;
+  }
+  .price .price-item .tp.active b {
+    color: #909ff8;
+  }
+}
+@media (max-width: 992px) {
+  .price {
+    flex-wrap: wrap;
+  }
+  .price p {
+    font-family: "Acherus Feral";
+    font-size: 18px;
+  }
+  .price .t {
+    margin-top: 60px;
+  }
+  .price .price-item {
+    margin: 15px;
+    width: 40%;
+    height: 550px;
+    border-radius: 10px;
+  }
+  .price .price-item #blackBg {
+    border-radius: 10px;
+  }
+  .price .price-item .tp.active {
+    font-size: 14px;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    line-height: 15px;
+  }
+}
+@media (max-width: 640px) {
+  .price {
+    flex-wrap: wrap;
+  }
+  .price p {
+    font-family: "Acherus Feral";
+    font-size: 25px;
+  }
+  .price .t {
+    margin-top: 60px;
+  }
+  .price .price-item {
+    margin: 15px;
+    width: 80%;
+    height: 550px;
+    border-radius: 10px;
+  }
+  .price .price-item #blackBg {
+    border-radius: 10px;
+  }
+  .price .price-item .tp.active {
+    font-size: 14px;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .price {
+    flex-wrap: wrap;
+  }
+  .price p {
+    font-family: "Acherus Feral";
+    font-size: 20px;
+    text-shadow: 0px 5px 10px rgba(255, 255, 255, 0.719);
+  }
+  .price .t {
+    margin-top: 60px;
+  }
+  .price .price-item {
+    margin: 15px;
+    width: 90%;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-radius: 10px;
+  }
+  .price .price-item #blackBg {
+    border-radius: 10px;
+  }
+  .price .price-item .tp.active {
+    font-size: 16px;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    line-height: 20px;
+  }
+}

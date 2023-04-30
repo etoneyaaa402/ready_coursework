@@ -1,0 +1,264 @@
+body{
+    background-color: #282626;
+    display: flex;
+    overscroll-behavior: none;
+    position: relative;
+    overflow-x: hidden;
+    background: 
+        url("../circle/blue.png") no-repeat 100% 0%,
+        url("../circle/pink.png") no-repeat 100% 20%,
+        url("../circle/green.png") no-repeat 100% 40%,
+        url("../circle/yellow.png") no-repeat 100% 60%,
+        url("../circle/skyblue.png") no-repeat 100% 80%,
+        #282626;
+}
+h1, h2, p{
+    color: #FFFFFF;
+}
+.pfo{
+    position: relative;
+    max-width: 100%;
+}
+.open{
+    display: flex !important;
+}
+
+.menu{
+    display: flex;
+    justify-content: right;
+    margin-right: 25px;
+}
+.menu_ul{
+    display: flex;
+    list-style: none;
+    justify-content: right;
+}
+.menu_li{
+    padding: 10px 20px 5px 20px;
+    font-family: 'Acherus Feral';
+    height: 30px;
+    font-size: 16px;
+    margin-right: 15px;
+    transition: all 0.3s ease-out;
+    border-radius: 5px;
+}
+
+.menu_li:hover {
+    transform: translateX(-7px) ;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #eef2fb,
+    0 0 21px #e2e7ff,
+    0 0 42px rgb(47, 0, 255),
+    0 0 82px rgb(47, 0, 255),
+    0 0 92px rgb(47, 0, 255),
+    0 0 102px rgb(47, 0, 255),
+    0 0 151px rgb(47, 0, 255);
+}
+.menu_li a{
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease-out;
+}
+.logo{
+    width: 60px;
+    height: 60px;
+    float: right;
+}
+
+.burger{
+    display: none;
+    margin: 25px;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    width: 30px;
+    height: 18px;
+}
+
+.burger span{
+    position: absolute;
+    z-index: 50;
+    height: 2px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.burger::after, .burger::before{
+    position: absolute;
+    z-index: 50;
+    content: '';
+    height: 2px;
+    background-color: #fff;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+}
+.burger::after{
+    bottom: 0;
+}
+.burger::before{
+    top: 0;
+}
+
+/* Добавляем класс active для анимации иконки бургера */
+.burger.active span { transform: scale(0) }
+
+.burger.active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+
+
+.arrow{
+    display: flex;
+    margin: 20px;
+    height: 30px;
+    background-color: #848282;
+    border-radius: 10px;
+}
+.arrow a {
+    font-family: 'SF UI Display';
+    margin: auto 5px ;
+    text-decoration: none;
+    color: #fff;
+}
+
+.p{
+    margin: auto 15px;
+    font-size: 18px;
+}
+svg{
+    margin-left: 5px;
+    color: #282626;
+}
+.pictures{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img{
+    width: 344px;
+    max-height: 510px;
+    margin: 15px;
+    max-width: 25%;
+}
+.d3{
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    left: 770px;
+    top: 170px;
+    z-index: -10;
+    background: #D448F8;
+    filter: blur(190px);
+}
+.d4{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 390px;
+    top: 590px;
+    z-index: -10;
+    background: #3795EC;
+    filter: blur(90px);
+}
+.d5{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 300px;
+    top: 1700px;
+    z-index: -10;
+    background: #7f48eb;
+    filter: blur(90px);
+}
+.d6{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 55px;
+    top: 825px;
+    z-index: -10;
+    background: #66dec6;
+    filter: blur(90px);
+}
+.d7{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 755px;
+    top: 1375px;
+    z-index: -10;
+    background: #f5ef4e;
+    filter: blur(90px);
+}
+
+@media (max-width: 1200px) {
+    .pfo{
+        max-width: 100%;
+    }
+    .menu_li a{
+        padding: 5px 8px 5px 8px;
+        height: 25px;
+        font-size: 14px;
+    }
+    .menu_li{
+        padding: 5px 8px 5px 8px;
+        display: flex;
+        justify-self: center;
+    }
+    img{
+        max-width: 40%;
+        width: 344px;
+        max-height: 510px;
+    }
+}
+
+@media(max-width:992px){
+    img{
+        max-width: 40%;
+        width: 400px;
+        max-height: 600px;
+    }
+}
+
+@media(max-width:767px){
+    .burger { 
+        display: flex;
+    }
+
+    .menu_ul{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        top: -10px; left: 0; right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: #282626;
+        row-gap: 15px;
+        animation: burgerAnimation 0.4s;
+    }
+
+
+}
+
+@media(max-width:425px){
+    img{
+        max-width: 40%;
+        width: 150px;
+        max-height: 225px;
+    }
+}
+
+@keyframes burgerAnimation {
+    from {opacity: 0}
+    to {opacity: 1}
+}

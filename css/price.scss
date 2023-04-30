@@ -1,0 +1,258 @@
+@import 'info';
+@import 'footer';
+.price{
+    display: flex;
+    margin: 30px;
+    justify-content: space-around;
+    margin-top: 150px;
+    p{
+        font-family: 'Acherus Feral';
+        font-size: 25px;
+        line-height: 5px;
+        color: #000000;
+        text-align: center;
+        text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.45);
+    }
+    .pr{
+        font-family: 'Microsoft Yi Baiti';
+        font-weight: 500;
+    }
+    .t{
+        margin-top: 60px;
+    }
+
+    .price-item {
+        margin: 15px;
+        width: 25%;
+        height: 750px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 10px 0px rgba(189, 189, 221, 0.536);
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        position: relative;
+
+        #blackBg {
+            position: absolute;
+            z-index: 5;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: #000;
+            opacity: 0;
+            border-radius: 20px;
+        }
+    }
+
+    .tp{
+        opacity: 0;
+        transition: 1s;
+    }
+    .tp.active{
+        position: relative;
+        z-index: 10;
+        transition: 1s;
+        opacity: 1;
+        font-family: 'SF UI Display';
+        font-size: 15px;
+        line-height: 25px;
+        color: #fff;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 10px;
+        a{
+            text-decoration: none;
+            transition: 1s;
+        }
+    }
+    .book_sh{
+        background-image: url(../иконки/album.jpg);
+    }
+    .com_sh{
+        background-image: url(../иконки/com.jpeg);
+    }
+    .ind_sh{
+        background-image: url(../иконки/ind.jpg);
+    }
+    .love_sh{
+        background-image: url(../иконки/lovestory.jpg);
+    }
+}
+
+@media (max-width: 1200px){
+    .price{
+        display: flex;
+        margin: 10px;
+        justify-content: center;
+        margin-top: -50px;
+        p{
+            font-family: 'Acherus Feral';
+            font-size: 16px;
+            line-height: 5px;
+            color: #000000;
+            text-align: center;
+            text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.45);
+        }
+        .t{
+            margin-top: 50px;
+        }
+        .price-item {
+            margin: 15px;
+            height: 750px;
+            border-radius: 15px;
+            
+            #blackBg {
+                border-radius: 15px;
+            }
+            .tp.active{
+                font-size: 14px;
+                border-radius: 15px;
+                padding: 20px;
+                margin: 10px;
+                line-height: 20px;
+                b{
+                    color: #909ff8;
+                }
+        }
+    }
+    
+    
+}
+}
+
+@media (max-width: 1024px){
+    .price{
+        display: flex;
+        margin: 10px;
+        justify-content: center;
+        margin-top: -50px;
+        p{
+            font-family: 'Acherus Feral';
+            font-size: 16px;
+            line-height: 5px;
+            color: #000000;
+            text-align: center;
+            text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.45);
+        }
+        .t{
+            margin-top: 50px;
+        }
+        .price-item{
+            
+            #blackBg {
+                border-radius: 15px;
+            }
+            .tp.active{
+                font-size: 14px;
+                border-radius: 15px;
+                padding: 20px;
+                margin: 10px;
+                line-height: 16px;
+                b{
+                    color: #909ff8;
+                }
+        }
+        
+    }
+    
+    
+}
+}
+
+
+@media(max-width:992px){
+    .price{
+        flex-wrap: wrap;
+        p{
+            font-family: 'Acherus Feral';
+            font-size: 18px;
+        }
+        .t{
+            margin-top: 60px;
+        }
+        .price-item {
+            margin: 15px;
+            width: 40%;
+            height: 550px;
+            border-radius: 10px;
+            
+            #blackBg {
+                border-radius: 10px;
+            }
+            .tp.active{
+                font-size: 14px;
+                border-radius: 15px;
+                padding: 20px;
+                margin: 10px;
+                line-height: 15px;
+            }
+        
+        }
+    }
+    
+}
+
+@media(max-width:640px){
+    .price{
+        flex-wrap: wrap;
+        p{
+            font-family: 'Acherus Feral';
+            font-size: 25px;
+        }
+        .t{
+            margin-top: 60px;
+        }
+        .price-item {
+            margin: 15px;
+            width: 80%;
+            height: 550px;
+            border-radius: 10px;
+            
+            #blackBg {
+                border-radius: 10px;
+            }
+            .tp.active{
+                font-size: 14px;
+                border-radius: 15px;
+                padding: 20px;
+                margin: 10px;
+                line-height: 20px;
+            }
+        
+        }
+    }
+    
+}
+
+@media(max-width:425px){
+    .price{
+        flex-wrap: wrap;
+        p{
+            font-family: 'Acherus Feral';
+            font-size: 20px;
+            text-shadow: 0px 5px 10px rgba(255, 255, 255, 0.719);
+        }
+        .t{
+            margin-top: 60px;
+        }
+        .price-item {
+            margin: 15px;
+            width: 90%;
+            height: fit-content;
+            border-radius: 10px;
+            
+            #blackBg {
+                border-radius: 10px;
+            }
+            .tp.active{
+                font-size: 16px;
+                border-radius: 15px;
+                padding: 20px;
+                margin: 10px;
+                line-height: 20px;
+            }
+        
+        }
+    }
+}
